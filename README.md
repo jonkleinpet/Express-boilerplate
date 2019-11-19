@@ -13,6 +13,11 @@ Complete the following steps to start a new project (NEW-PROJECT-NAME):
 5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
 6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
 
+## Postgrator
+
+1. Name your migration files to add tables 001.do.create.nameOfFile.sql
+2. Name your migration files that remove tables 001.undo.create.nameOfFile.sql
+
 ## Scripts
 
 Start the application `npm start`
@@ -20,6 +25,10 @@ Start the application `npm start`
 Start nodemon for the application `npm run dev`
 
 Run the tests `npm test`
+
+Run migrations to postgres database for first time `npm run migrate`
+
+Run migrations to a specific migration `npm run migrate 001`
 
 ## Deploying
 

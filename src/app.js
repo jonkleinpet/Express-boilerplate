@@ -11,10 +11,14 @@ const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
   : 'common';
 
+// Middleware
 app.use(morgan(morganOption, { skip: () => NODE_ENV === 'test' }));
 app.use(helmet());
 app.use(cors());
 
+// Routes
+
+// Basic error handling
 app.use(function errorHandler(error, req, res, next) {
   let response;
   if (NODE_ENV === 'production') {
@@ -26,6 +30,7 @@ app.use(function errorHandler(error, req, res, next) {
   res.status(500).json(response);
 });
 
+// Remove after adding routes
 app.get('/', (req, res) => {
   res.send('API recieved get request');
 });

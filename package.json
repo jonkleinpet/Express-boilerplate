@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.0.1",
+    "mocha": "^10.2.0",
     "nodemon": "^1.18.10",
     "supertest": "^3.4.2"
   }
